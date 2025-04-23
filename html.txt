@@ -1,0 +1,183 @@
+1.Tổng quan lập trình web : Cách mà internet vận hành - Khám phá cơ bản về lập trình web
+	- IP
+	- DNS
+	- WebBrowser - WebServer
+
+2. Lập trình website - Static website & Dynamic website - Front End & Back End
+	- Web tĩnh: mỗi lần gửi request, máy chủ gửi lại các tệp html, css, js đơn giản đến hiển thị trên trình duyệt,
+				về cơ bản không có bất cứ thay đổi nào trên trang web này.
+	- Web động: trang web mà nội dung được update online, liên tục và trả lời on time với người dùng
+	- Front End
+	- Back End
+
+3. Setup Visual Studio Code
+
+4. Install Extensions
+	
+5. HTML là gì - Tìm hiểu về html, css , js
+	- HyperText Markup Language (.html): Ngôn ngữ đánh dấu siêu văn bản, làm khung xương cho webpage
+	- Cascading Style Sheets (.css): Ngôn ngữ định dạng trang web, làm trang trí cho webpage
+	- JavaScript (.js): là 1 ngôn ngữ lập trình dùng để tạo các thao tác trên trang web, làm sự kiện xử lý cho webpage
+	
+6.Cấu trúc tệp html - tìm hiểu DOCTYPE, thẻ html, thẻ head
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+	</head>
+	<body>
+		
+	</body>
+	</html>
+	
+	- Thẻ <!DOCTYPE html>
+		+ Là khai báo doctype cho HTML, khai báo cho trình duyệt biết rằng web sử dụng HTML5 - phiên bản mới nhất hiện tại
+	- Thẻ <html lang="en"> </html>
+		+ Được sử dụng để định nghĩa phần thân của tài liệu HTML
+		+ Sử dụng thuộc tính lang="vi" để chỉ ngôn ngữ được viết của website
+		+ Trong 1 file chỉ có duy nhất 1 thẻ <html></html>
+	- Thẻ <head> </head>
+		+ Chứa các thông tin về trang web mà không được hiểu thị trực tiếp lên trình duyệt của người dùng
+		+ Các thông tin: tiêu đề, mô tả, từ khoá, thông tin tác giả, các tập tin CSS và JS được liên kết với trang...
+
+7. Tìm hiểu thẻ body - thẻ heading
+	- Thẻ <body></body> 
+		+ Để chứa nội dung chính của trang web
+		+ Hiển thị trực tiếp lên trình duyệt của người dùng, tạo thành nội dung chính của trang
+	- Tra cứu các thẻ HTML: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements
+	- Thẻ tiêu đề:
+		+ <h1></h1>
+		+ <h2></h2>
+		+ <h3></h3>
+		+ <h4></h4>
+		+ <h5></h5>
+		+ <h6></h6>
+
+8.Tìm hiểu thẻ <p></p> Paragraph HTML - HTML Paragraph Elements - Lorem Ipsum HTML Generator
+	- Thẻ <p></p> để chứa các đoạn văn bản
+
+9. Tìm hiểu thẻ <br>, <hr> - thẻ tự đóng html -self-closing tag html
+	- Thẻ <br> - break: "phá vỡ" hoặc "ngắt" dòng
+	- Thẻ <hr> - horizontal rule: tạo "đường kẻ ngang" ngăn cách trên trang
+
+10. Tìm hiểu thẻ <b></b>, <i></i>, <u></u> HTML
+	- Thẻ b: bold - in đậm (dùng <strong></strong> thay thế nội dung quan trọng)
+	- Thẻ i: italic - in nghiêng (dùng <em></em> emphasis để nhấn mạnh nội dung)
+	- Thẻ u: underline - gạch chân
+
+11. Thẻ list trong html <ul></ul>, <ol></ol> - unordered list HTML and ordered list
+	- Thẻ ul - unordered list: danh sách không có thứ tự
+	- Thẻ ol - ordered list: danh sách có thứ tự
+	- Thẻ li - list item: là thẻ con trực tiếp của ul, online
+	- <ol reversed></ol> : đảo ngược thứ tự
+	- <ol type=""></ol> : type= 1, A, a, I, i
+	- Thẻ ul, ol lồng nhau - unordered list HTML and ordered list ( ul>li*5{ item $ } )
+
+12. Thẻ <a href=""></a> HTML - anchor HTML
+	- href="#" : di chuyển đến đầu trang
+	- href="link" : di chuyển đến đường link được chỉ định
+	- target="_self" : mở tại trang hiện tại
+	- target="_blank" : mở trong tab mới
+	- href="tel:+84912345678" : chuyển hướng đến 1 ứng dụng có thể gọi nếu máy đã cài
+	- href="mailto:mail@gmail.com" : chuyển hướng đến 1 ứng dụng có gửi email nếu máy đã cài
+		href="mailto:nguyenthanhhai192005@gmail.com?cc=admin@domain.com,user@domain.com&bcc=local@server.com&subject=Hello%20World&body=Hii%20My%20name%20is%20Hai"
+		+ mailto:
+		+ cc=
+		+ bcc=
+		+ subject=
+		+ body=
+
+13. Thẻ <img/> trong HTML
+	- Là thẻ tự đóng, dùng để hiển thị hình ảnh trên website
+	- src="link" : chỉ định đường dẫn tới tập tin hình ảnh
+	- alt=""
+		+ hiển thị text khi link ảnh lỗi
+		+ hỗ trợ trình đọc màn hình cho người khiếm thị
+		+ công cụ tìm kiếm thu thập dữ liệu trên trang
+		+ Trang tìm ảnh đẹp: https://unsplash.com
+	- width="" : set chiều rộng cho ảnh
+	- height="" : set chiều dài cho ảnh
+
+14. HTML Path Tất cả những gì bạn cần biết về đường dẫn thư mục HTML
+	- Đường dẫn tuyệt đối (Absolute Path): là đường dẫn đầy đủ tính từ gốc hệ thống hoặc gốc của website.
+		+ Sử dụng: / Root path
+	- Đường dẫn tương đối (Relative Path): là đường dẫn được tính từ vị trí hiện tại của tệp đang sử dụng đường dẫn đó.
+		+ Sử dụng: ./ để truy cập cùng cấp hoặc thư mục con, tệp phía sau
+		+ Sử dụng: ../ để trở về thư mục trước 1 cấp
+	- Ví dụ:
+		MyWebApp/
+		├── Web Pages/
+		│   ├── index.jsp
+		│   ├── about/
+		│   │   └── contact.jsp
+		│   ├── css/
+		│   │   └── style.css
+		│   └── images/
+		│       └── logo.png
+
+		<!-- Tuyệt đối -->
+		<link rel="stylesheets" href="/MyWebApp/css/style.css">
+
+		<!-- Tương đối -->
+		<img src="../images/logo.png" alt="Logo">
+
+15. Multi page website
+	- Dùng thẻ a và đường dẫn tương đối để di chuyển giữa các trang
+
+16. Git và GitHub cho người mới Hướng dẫn từ A đến Z
+	1. CAU TRUC CUA GIT
+		- Local Repository:
+		+ Working Directory: Thư mục chứa tệp dự án, nơi chỉnh sửa code.
+		+ Staging Area: Khu vực tạm để chọn thay đổi trước khi commit.
+		+ Local Repository: Lưu các commit (ảnh chụp dự án) dưới dạng nhánh (mặc định: main).
+		- Remote Repository: Dự án lưu trên máy chủ (GitHub), dùng để đồng bộ, làm việc nhóm.
+		- Mối quan hệ:
+		+ git push: Đẩy commit từ local lên remote.
+		+ git pull: Kéo thay đổi từ remote về local.
+		+ Làm việc offline trên local, đồng bộ khi có mạng.
+
+	2. CAC LENH GIT THONG DUNG
+		* Thiết lập:
+			- git init: Khởi tạo repository.
+			- git config --global user.name "Tên": Đặt tên người dùng.
+			- git config --global user.email "email": Đặt email.
+			- git clone <url>: Tải repository từ remote.
+
+		* Làm việc cục bộ:
+			- git status: Xem trạng thái tệp.
+			- git add <tệp> hoặc git add .: Thêm thay đổi vào Staging Area.
+			- git commit -m "Mô tả": Lưu thay đổi vào Local Repository.
+			- git diff: Xem thay đổi chưa stage/commit.
+
+		* Quản lý nhánh:
+			- git branch: Liệt kê nhánh.
+			- git branch <tên>: Tạo nhánh.
+			- git checkout <tên>: Chuyển nhánh.
+			- git checkout -b <tên>: Tạo và chuyển nhánh.
+			- git merge <tên>: Hợp nhất nhánh.
+			- git branch -d <tên>: Xóa nhánh.
+
+		* Đồng bộ remote:
+			- git remote add origin <url>: Liên kết với remote.
+			- git push origin <nhánh>: Đẩy commit lên remote.
+			- git pull origin <nhánh>: Kéo thay đổi từ remote.
+			- git fetch: Lấy thông tin từ remote.
+
+		* Lịch sử và khôi phục:
+			- git log: Xem lịch sử commit.
+			- git revert <hash>: Hủy commit.
+			- git reset <hash>: Quay lại commit cũ.
+			- git stash: Lưu tạm thay đổi.
+
+		* Khác:
+			- git rm <tệp>: Xóa tệp.
+			- git mv <tệp-cũ> <tệp-mới>: Đổi tên/di chuyển.
+			- git clean -f: Xóa tệp untracked.
+
+	3. LUONG LAM VIEC MAU
+		1. Khởi tạo: git init, thêm tệp, git add ., git commit -m "Khởi tạo".
+		2. Tạo nhánh: git checkout -b feature-xyz, chỉnh sửa, commit.
+		3. Đẩy lên GitHub: git remote add origin <url>, git push origin feature-xyz.
+		4. Hợp nhất: git checkout main, git merge feature-xyz, git push origin main.
