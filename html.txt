@@ -129,14 +129,14 @@
 16. Git và GitHub cho người mới Hướng dẫn từ A đến Z
 	1. CAU TRUC CUA GIT
 		- Local Repository:
-		+ Working Directory: Thư mục chứa tệp dự án, nơi chỉnh sửa code.
-		+ Staging Area: Khu vực tạm để chọn thay đổi trước khi commit.
-		+ Local Repository: Lưu các commit (ảnh chụp dự án) dưới dạng nhánh (mặc định: main).
+			+ Working Directory: Thư mục chứa tệp dự án, nơi chỉnh sửa code.
+			+ Staging Area: Khu vực tạm để chọn thay đổi trước khi commit.
+			+ Local Repository: Lưu các commit (ảnh chụp dự án) dưới dạng nhánh (mặc định: main).
 		- Remote Repository: Dự án lưu trên máy chủ (GitHub), dùng để đồng bộ, làm việc nhóm.
 		- Mối quan hệ:
-		+ git push: Đẩy commit từ local lên remote.
-		+ git pull: Kéo thay đổi từ remote về local.
-		+ Làm việc offline trên local, đồng bộ khi có mạng.
+			+ git push: Đẩy commit từ local lên remote.
+			+ git pull: Kéo thay đổi từ remote về local.
+			+ Làm việc offline trên local, đồng bộ khi có mạng.
 
 	2. CAC LENH GIT THONG DUNG
 		* Thiết lập:
@@ -187,3 +187,31 @@
 		2. Tạo nhánh: git checkout -b feature-xyz, chỉnh sửa, commit.
 		3. Đẩy lên GitHub: git remote add origin <url>, git push origin feature-xyz.
 		4. Hợp nhất: git checkout main, git merge feature-xyz, git push origin main.
+
+17. HTML Entities_ Tạo ký tự đặc biệt và biểu tượng trong mã HTML
+	- Cụ thể trong trang: https://www.freeformatter.com/html-entities.html
+		+ "&lt" : < , "&gt": >
+
+18. Thẻ <pre></pre> trong HTML
+	- pre - preformatted: dùng để giữ nguyên định dạng văn bản trong trình soạn thảo code
+
+19. HTML code tag
+	- <code></code>: là thẻ có ngữ nghĩa, sử dụng để hiển thị code
+	- Trang chuyển code sang html entities: https://codebeautify.org/html-escape-unescape
+
+20. PrismJS Code Highlighting
+	- Sử dụng cdn tại trang sau để highlighting code 
+		+ https://prismjs.com
+		+ https://cdnjs.com/libraries/prism/1.30.0
+
+21 HTML Table Tutorial
+	- <table></table>
+		+ <tr></tr>: table row
+		+ <th></th>: table header
+		+ <td></td>: table data
+
+		+ <thead></thead>: table header
+		+ <tbody></tbody>: table body
+		+ <tfoot></tfoot>: table footer
+	- colspan: chỉ định phần tử chứa bao nhiêu cột, 
+	  rowspan: chỉ định phần tử chứa bao nhiêu hàng
