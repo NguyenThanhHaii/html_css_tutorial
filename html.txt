@@ -152,12 +152,16 @@
 			- git diff: Xem thay đổi chưa stage/commit.
 
 		* Quản lý nhánh:
-			- git branch: Liệt kê nhánh.
+			- git branch: Liệt kê nhánh ở local
+			- git branch -a: Liệt kê nhánh ở cả local và remote
 			- git branch <tên>: Tạo nhánh.
+			- git branch -c <tên>: Tạo nhánh và copy toàn bộ code của nhánh hiện tại sang nhánh mới
 			- git checkout <tên>: Chuyển nhánh.
 			- git checkout -b <tên>: Tạo và chuyển nhánh.
 			- git merge <tên>: Hợp nhất nhánh.
 			- git branch -d <tên>: Xóa nhánh.
+			- git push -uu origin <tên>: push nhánh lên remote repo
+			- git push -d origin <tên>: Xóa nhánh trên remote repo
 
 		* Đồng bộ remote:
 			- git remote add origin <url>: Liên kết với remote.
@@ -167,6 +171,8 @@
 
 		* Lịch sử và khôi phục:
 			- git log: Xem lịch sử commit.
+			- git log --oneline: Xem lịch sử id commit + message
+			- git checkout id commit: truy vấn đến code trong lịch sử
 			- git revert <hash>: Hủy commit.
 			- git reset <hash>: Quay lại commit cũ.
 			- git stash: Lưu tạm thay đổi.
