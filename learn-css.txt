@@ -1,0 +1,161 @@
+22. CSS cơ bản - Inline, internal, and external CSS
+    - inline (css nội tuyến): là cách viết mã CSS ngay bên trong phần tử cơ bản html
+        <h1 style="color: red">Chào mừng bạn đến với trang chủ</h1>
+
+    - internal (css nội bộ): là cách viết mã css trong cặp thẻ style đặt trong khối head
+            <style>
+                h2 {
+                    color: yellow;
+                    text-align: center;
+                }
+            </style>
+
+    - external (css bên ngoài): tách biệt file css với file html
+        <link rel="stylesheets" href="assets/css/style.css" />
+
+    - Mức độ ưu tiên: phần khai báo của cách nào ở sau thì ghi đè lên cách trước đó
+
+23. Một số thuộc tính CSS cơ bản
+    - color: Màu chữ
+    - font-style: Kiểu chữ
+    - font-family: Font chữ
+    - text-transform: Chuyển hoa thường
+    - text-align: Căn dòng
+    - fort-size: Cỡ chữ
+    - line-height: Định khoảnh cách giữa các dòng =x lần font chữ
+
+24. Opacity, Display và Visibility
+    - opacity: quy định độ trong suốt
+        0.0 -> 1.0 / 0% -> 100%
+    - background-image: url() : hình nền
+    - display: none : ẩn khỏi trang web
+    - visibility:
+        + hidden: ẩn
+        + visible: hiện
+
+    - opacity: 0
+        + Mô tả: Làm phần tử trong suốt hoàn toàn.
+        + Chiếm không gian trên trang: Có.
+        + Có thể tương tác (click, focus,...): Có.
+        + Có trong DOM: Có.
+
+    - display: none
+        + Mô tả: Ẩn hoàn toàn phần tử, loại khỏi luồng hiển thị.
+        + Chiếm không gian trên trang: Không.
+        + Có thể tương tác (click, focus,...): Không.
+        + Có trong DOM: Không (không hiển thị trong cây hiển thị DOM).
+
+    - visibility: hidden
+        + Mô tả: Ẩn phần tử nhưng vẫn giữ không gian bố cục.
+        + Chiếm không gian trên trang: Có.
+        + Có thể tương tác (click, focus,...): Không.
+        + Có trong DOM: Có.
+
+25. Favicon là gì, tạo và tối ưu cho đa thiết bị
+    - Tạo icon cho trang trên trình duyệt <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    - Trình cắt ảnh https://www.favicon-generator.org
+
+26. CSS Prefix - Tăng cường tương thích đa trình duyệt cho website _caniuse.com
+    - user-select: none; không cho phép người dùng bôi đen
+    - Chuyển code css sang dạng có prefix https://tools.webdevpuneet.com/css-autoprefixer
+    - Kiểm tra thuộc tính đó có cần prefix không: https://caniuse.com
+
+27. CSS Selector cơ bản_ Hiểu về Tên thẻ, ID, và Class
+    - id: khi muốn áp dụng css cho duy nhất 1 phần tử, duy nhất, không đặt trùng
+    - class: khi muốn áp dụng css cho 1 hoặc nhiều phần tử
+
+28. Combinator selectors * Selector element.class
+    - *{  }
+    - #id
+    - .class
+    - tag.class
+
+29. Combinator selectors p2 - element,element CLASS1.class2
+    - h1, h2, p, ul { color: red; } : gán css cho các thẻ h1, h2, p, ul
+    - p, .class, #id { font-size: 50px; } : gán css cho thẻ p, cho các thẻ có class = class và 1 thẻ có id = id
+    - class1.class2 {} : gán css cho thẻ có đồng thời 2 class class1 và class2
+
+30. Combinator selectors p3 - Space element_element
+    - div p {} : gán css cho thẻ p nằm trong thẻ div
+    - .class p {} : gán css cho thẻ p nằm trong class = class
+    - div > p {} : gán thẻ css cho thẻ p là con trực tiếp của thẻ div (nằm trong 1 cấp duy nhất <div> <p></p> </div>)
+
+31. Combinator selectors p4 - element+element element~element
+    - h1 + h2 {} : gán css cho thẻ h2 nằm ngay sau thẻ h1 (<h1></h1> <h2></h2>)
+    - .class + h3 {} : gán css cho thẻ h3 nằm ngay sau thẻ có class = class (<div class="class"></div> <h3></h3>)
+    - img ~ a {} : gán css cho tất cả thẻ a đứng sau thẻ img (<img/> <a></a> <a></a> <a></a>)
+
+32. Attribute Selectors
+    - [href] {} : áp dụng css cho tất cả các thẻ có thuộc tính href
+    - a[href] {} : áp dụng cho thẻ a có thuộc tính href
+    - a[target="_blank"] {} : áp dụng css cho thẻ a có thuộc tính href = "_blank"
+    - [title~="pic"] {}  : áp dụng css cho thẻ có thuộc tính title có chứa từ "pic"
+    - [title*="pic"] {}  : áp dụng css cho thẻ có thuộc tính title có chứa chuỗi "pic"
+    - [title|="pic"] {}  : áp dụng css cho thẻ có thuộc tính title có: từ "pic", hoặc từ "pic" và các từ sau đó phải được nối bằng gạch ngang
+    - [title^="pic"] {}  : áp dụng css cho thẻ có thuộc tính title có từ "pic" đầu tiên
+    - [title$="pic"] {}  : áp dụng css cho thẻ có thuộc tính title có từ "pic" cuối cùng
+
+33. Thông thạo CSS pseudo-classes hover active trong một thời gian ngắn - Lớp giả
+    - :hover{} : gán css khi di chuột qua
+    - :active{} : gán css khi nhấn giữ chuột
+
+34. Sử dụng pseudo-classes link và a:visited để làm nổi bật liên kết
+    - :link{} : gán css khi chưa click vào
+    - :visited{} : gán css khi đã click truy cập
+
+35. CSS Pseudo-classes empty và target - Cải thiện trải nghiệm người dùng trên trang web
+    - :empty{} : gán css cho phần tử không có nội dung
+    - :target{} : gán css cho phần tử không có nội dung
+
+36. CSS: Pseudo-classes: Child selectors
+    - p:first-child{} : chọn các thẻ p là thẻ con đầu tiên
+    - p:last-child{} : chọn các thẻ p là thẻ con cuối cùng
+    - p:nth-child(n){} : chọn các thẻ p là thẻ thứ n từ trên xuống
+    - p:nth-last-child(n){} : chọn các thẻ p là thẻ thứ n từ cuối lên
+    - p:only-child{} : chọn các thẻ p là thẻ con duy nhất
+    - n:
+        + old (nhảy theo n lẻ)
+        + even (nhảy theo n chẵn)
+        + 2n + 1 (nhảy theo step mong muốn)
+        
+37. CSS: Pseudo-classes: Type selectors
+    - p:first-of-type{} : chọn các thẻ p xuất hiện đầu tiên trong thẻ cha
+    - p:last-of-type{} : chọn các thẻ p xuất hiện cuối cùng trong thẻ cha
+    - p:nth-of-type(n){} : chọn các thẻ p xuất hiện thứ n trong thẻ cha
+    - p:nth-last-of-type(n){} : chọn các thẻ p xuất hiện thứ n trong thẻ cha, tính từ cuối lên
+    - p:only-of-type{} : chọn các thẻ p xuất hiện duy nhất trong thẻ cha
+
+38. CSS: Pseudo-classes: Not(selector)
+    - .class.not(p): chọn các thẻ có class="class" loại trừ thẻ <p></p>
+    - .class.not(:first-of-type): chọn các thẻ có class="class" loại trừ các thẻ xuất hiện lần đầu
+
+    - Mức độ ưu tiên nhận css
+        1. !important
+        2. Inline style (viết trong thẻ html)
+        3. ID(#) selector
+        4. Class(.) hoặc pseudo-class(:) selector
+        5. Element selector(h, div, p, a,...)
+        6. Universal selector(*): bộ chọn chung
+    
+39. Học CSS selector qua trò chơi
+    - https://game.tuhoc.cc
+
+40. CSS Box model: Padding
+    - Kích thước phần tử: width * height = content + padding + border
+    - padding: 20px;  
+        cả 4 hướng
+    - padding: 20px 10px;
+        trên+dưới  trái+phải
+    - padding: 20px 10px 40px;
+        trên trái+phải dưới
+    - padding: 20px 10px 40px 30px;
+        trên phải dưới trái
+
+41. CSS Box model: Border
+    - border: <line-width> || <line-style> || <color>
+    - border-width:
+    - border-style:
+    - border-color:
+    - border-radius:
+
+41. CSS Box model: Margin

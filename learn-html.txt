@@ -204,7 +204,7 @@
 		+ https://prismjs.com
 		+ https://cdnjs.com/libraries/prism/1.30.0
 
-21 HTML Table Tutorial
+21. HTML Table Tutorial
 	- <table></table>
 		+ <tr></tr>: table row
 		+ <th></th>: table header

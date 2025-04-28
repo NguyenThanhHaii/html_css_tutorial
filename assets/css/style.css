@@ -1,14 +1,19 @@
+* {
+    color: #fff;
+    background-color: #000;
+}
+
 img {
     transition: 1.5s;
 }
 
 input:checked~img {
     /* 1. biến mất khỏi giao diện, không giữ vị trí */
-    /* display: none; */
+    display: none;
     /* 2. biến mất khỏi giao diện, nhưng vẫn giữ vị trí */
     /* visibility: hidden; */
     /* 3. làm mờ đi */
-    opacity: 0;
+    /* opacity: 0; */
 }
 
 h1 {
@@ -17,4 +22,9 @@ h1 {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+h2:target {
+    color: red;
+    text-decoration: underline;
 }
