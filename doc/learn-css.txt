@@ -217,3 +217,186 @@
         html{
             font-size: 62.5%;
         }
+
+57. CSS Colors từ A đến Z
+    - có 16^6 = 16777216 ~ 16,7tr màu
+    - Hệ RGB
+        + rgb(red, green, blue)
+        + rgba(red, green, blue, alpha)
+    - Hệ thập lục phân: 
+        + #rrggbb (rr: red, gg: green, bb: blue) dải giá trị từ: 00 -> FF
+        + #rrggbbaa (rr: red, gg: green, bb: blue, aa: alpha)
+    - Color name: red, blue, pink, yellow, ...
+    - currentColor: lấy màu của phần tử hiện tại, có tính kế thừa
+
+58. CSS Fonts Explained
+    - Các kiểu font phổ biến
+        + Font không có gai ở đầu chữ cái: Sans serif
+        + Font có gai ở đầu: Serif
+        + Font có cùng độ rộng: Monospace
+
+59. System Font CSS
+    - https://css-tricks.com/snippets/css/system-font-stack
+        + /* System Fonts with system-ui */
+         body {
+            font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+         }
+
+60. CSS Google Fonts
+    - https://fonts.google.com
+
+61. Typography in CSS
+    - https://cssreference.io/typography
+    - font-weight: độ dày của chữ (100 - 900)
+    - line-height: chiều cao dòng
+
+62. CSS tips
+    - letter-spacing: tăng giảm khoảng cách giữa các ký tự
+    - word-spacing: tăng giảm khoảng cách giữa các từ
+    - text-align: căn dòng text (trong box chứa nó)
+        + justify: căn dàn đều 2 bên
+        + left: căn trái (default)
+        + right: căn phải
+        + center: căn giữa
+
+63. Typography
+    - text-decoration:
+        + none: bỏ gạch chân
+        + underline: thêm gạch chân
+        + line-through: thêm gạch ngang
+        + overline: gạch trên đầu
+        + định kiểu của dấu gạch, màu sắc, kích thước (text-decoration: underline dotted blue 5px)
+
+    - text-indent:
+        + -Xpx: thụt lề -X px
+        + Xpx: thụt lề X px
+
+    - text-transform:
+        + capitalize: viết hoa chữ cái đầu
+        + lowercase: viết thường toàn bộ text
+        + uppercase: viết hoa toàn bộ text
+
+64. Typography
+    - https://codepen.io
+    - white-space: quy định về khoảng trắng khi code
+        (ngoại trừ thẻ pre giữ nguyên định dạng code)
+        + normal: trạng thái mặc định
+        + nowrap: không xuống dòng (kể cả chạm tới lề)
+        + pre: giữ nguyên định dạng code, giống thẻ pre
+        + pre-line: giữ nguyên định dạng theo line(enter)
+            tất cả khoảng trắng dư thừa mỗi dòng trong nội dung văn bản sẽ bị loại bỏ
+            dòng mới được giữ nguyên
+        + pre-wrap
+
+    - word-break: khi đoạn text hoặc link dài, người dùng nhập liền nhau thì có thể gây vỡ giao diện vì text không bị xuống dòng
+        + break-all: để bẻ xuống dòng
+
+65. CSS Typography
+    - text-shadow: bóng đổ text
+        + text-shadow: horizontal vertical blur color
+                       trục ngang | trục dọc | độ nhoè | màu sắc
+    - overflow:
+        + visible (default): hiển thị nội dung kể cả vượt box chứa
+        + hidden: ẩn nội dung vượt box chứa
+        + scroll: tự động hiện scroll khi tràn khung
+        + auto: nếu nội dung ngắn -> không có scroll bar; nếu nội dung vượt box chứa -> tự động sinh ra scroll bar
+
+66. Tối ưu trải nghiệm người dùng với overflow - scrollbar trong CSS
+        - overscroll-behavior
+        - custom scrollbar css: tùy biến thanh cuộn
+            /* width */
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            /* Track */
+            ::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+                background: #888;
+            }
+
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+
+67. Text-Overflow trong CSS
+    - text-overflow: ellipsis;
+        h2 {
+            width: 500px;
+            white-space: nowrap;
+            background-color: pink;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+    h3 {
+        background-color: paleturquoise;
+        overflow: hidden;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+    }
+
+68. Tạo hiệu ứng biểu tượng đẹp với Font Awesome
+    - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css
+    - https://fontawesome.com
+
+69. Học CSS Background-color
+    - nền sẽ đổ vào toàn bộ các phần tính vào kích thước phần tử
+
+70,71,72. Background-Image
+    - background-image:
+        + url()
+        + none
+    - background-repeat:
+        + no-repeat: bg không lặp lại
+        + repeat-x: bg lặp lại trục x
+        + repeat-y: bg lặp lại trục yy
+        + repeat: bg lặp lại (mặc định)
+    - background-size:
+        + contain: ảnh vừa khung hình, giữ nguyên tỉ lệ ảnh, không bị mất ảnh, nếu còn khoảng trống ảnh sẽ bị lặp lại
+        + cover: ảnh vừa khớp khung hình, giữ nguyên tỉ lệ ảnh, có thể phất 1 phần ảnh, không bị lặp lại
+        + n%
+    - background-position:
+        + top
+        + left
+        + right
+        + bottom
+        + center
+        + top left
+        + top right
+        + bottom left
+        + bottom right
+        + x% y%
+
+73. CSS linear-gradient - background nền gradient cho trang web
+    - background-image: linear-gradient(direction, color-stop1, color-stop2);
+    - https://cssgradient.io
+    
+74. Hiểu rõ background-attachment
+    - background-attachment:
+        + scroll (default): ảnh sẽ tự động cuộn theo trình duyệt khi kéo lên xuống
+        + fixed: ảnh cố định khi kéo scroll lên xuống
+        + local: ảnh cố định cục bộ trong bố cục con
+
+75. CSS Background-clip
+    - background-clip:
+        + border-box (default): ảnh sẽ đổ vào full kích thước phần tử
+        + padding-box: ảnh chỉ đổ đến padding
+        + content-box: ảnh chỉ đổ phần content
+
+76. CSS Background-origin
+    - Xác định gốc bức ảnh đặt ở vị trí nào
+        + border-box: gốc 0,0 của ảnh sẽ ở border
+        + padding-box (default): gốc ảnh mặc định ở phần padding
+        + content-box: gốc 0,0 của ảnh sẽ ở content
+
+77. CSS Background Shorthand Sử dụng cú pháp viết tắt Ngắn gọn Background
+
+78. CSS backdrop-filter Cách làm mờ nền đơn giản
+    - backdrop-filter: blur(npx) contrast(x%)

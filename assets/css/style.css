@@ -96,3 +96,7 @@ h2:target {
 .box2 {
     box-sizing: border-box;
 }
+
+body {
+    background-image: linear-gradient(to right, #ff7e5f, #feb47b);
+}
