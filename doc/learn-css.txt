@@ -158,4 +158,62 @@
     - border-color:
     - border-radius:
 
-41. CSS Box model: Margin
+42. CSS Box model: Margin
+
+43. Học căn giữa trang bằng CSS margin
+
+44. Hướng dẫn CSS - Sử dụng Margin âm để tạo hiệu ứng độc đáo
+    - https://www.uifaces.co
+
+45. Giải thích CSS Margin Collapse và cách khắc phục căn bản
+    - Là hiện tượng chồng lặp thuộc tính margin khi 2 phần tử liền kề cùng thiết lập margin với phần tử còn lại theo chiều dọc
+    - Margin collapse chỉ ảnh hưởng theo chiều dọc
+
+46. CSS outline
+    - Outline là đường viền bao quanh mép ngoài cùng của đối tượng
+        + không làm tăng kích thước phần tử
+        + là 1 vùng bao quanh bên ngoài, chiếm cả phần margin
+        
+47. CSS Box-Sizing: Content-Box và Border-Box
+    - Content box: width, height là kích thước của content
+    - Border box: width, height là kích thước của phần tử (thường hay sử dụng)
+
+48. CSS Mặc định - Default CSS Values
+    - Default CSS Values: trình duyệt sẽ tự thêm vào các thuộc tính mặc định để hiển thị các thẻ HTML, 
+                          tuy nhiên các trình duyệt khác nhau có thể các thuộc tính được thêm vào sẽ khác nhau
+49. CSS Inheritance - kế thừa trong css
+
+50. Reset CSS
+    - Các thẻ có CSS mặc định làm khó khăn trong việc kiểm soát kích thước và tính toán kích thước so với thiết kế
+    - https://meyerweb.com/eric/tools/css/reset/
+    - Lưu ý: reset.css luôn đặt link file trên cùng
+
+51. Block, Inline, and Inline-Block explained
+    - Các thẻ HTML đều có thuộc tính display: block, inline, inline-Block
+    - Block Element: các thẻ ở trạng thái mặc định, luôn chiếm 100% chiều rộng của thẻ cha bất kể nội dung dài hay ngắn (vd: div, p, h1, h2,...)
+    - Inline Element: hộp có kích thước phụ thuộc vào nội dung bên trong nó (vd: a, strong, em, button,...)
+
+52. CSS Units Explained 
+    - Đơn vị tuyệt đối - Absolute lengths
+        + Pixel - Picture Element - điểm ảnh: là đơn vị cơ bản để đo kích thước 1 hình ảnh kĩ thuật số
+
+53. CSS Relative Lengths | Đơn vị %
+    - Đơn vị tương đối - Relative lengths
+        + Kích thước = % so với thẻ cha của nó
+
+54. CSS Relative Lengths | Đơn vị vw, vh CSS
+    - vw: % chiều rộng khung nhìn
+    - vh: % chiều cao khung nhìn
+
+55. CSS Relative Lengths | Đơn vị em CSS
+    - Nem: kích thước gấp N lần font chữ hiện tại (có kế thừa)
+        + TH1: Thẻ cha và thẻ con không có font-size -> lấy kích thước của root(html) (16px)
+        + TH2: Thẻ cha có font-size tuyệt đối -> kế thừa từ thẻ cha
+        + TH3: Cả thẻ cha và thẻ con đều đặt font-size -> ưu tiên font-size của chính nó
+        + TH4: Thẻ cha có font-size tương đối -> thẻ cha lấy kích thước mặc định từ trình duyệt, thẻ con tiếp tục kế thừa thẻ cha
+
+56. CSS Relative Lengths | Đơn vị rem CSS
+    - Nrem: kích thước gấp N lần font chữ root element (không kế thừa)
+        html{
+            font-size: 62.5%;
+        }

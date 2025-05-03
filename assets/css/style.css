@@ -1,6 +1,5 @@
 * {
-    color: #fff;
-    background-color: #000;
+    color: #000000;
 }
 
 img {
@@ -27,4 +26,73 @@ h1 {
 h2:target {
     color: red;
     text-decoration: underline;
+}
+
+.container h1 {
+    font-size: 40px;
+}
+
+.container p {
+    font-size: 24px;
+    line-height: 2;
+}
+
+.container img {
+    max-width: 900px;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1000px;
+    background-color: #ffe9e9;
+    text-align: center;
+}
+
+.margin-am {
+    width: 200px;
+    height: 200px;
+    border: 30px solid blue;
+    margin: 0 auto;
+}
+
+.content {
+    background-color: #f3f7d5;
+    padding: 20px;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-left: -60px;
+}
+
+.avatar:first-child {
+    margin-left: 0px;
+}
+
+.box-1 {
+    width: 200px;
+    height: 200px;
+    /* border: 10px solid red; */
+    outline: 50px solid blue;
+    margin: 40px;
+    padding: 20px;
+    outline-offset: 20px;
+}
+
+.box {
+    width: 100px;
+    height: 150px;
+    padding: 20px;
+    border: 10px solid red;
+    /* default box-sizing: content-box; */
+}
+
+.box1 {
+    box-sizing: content-box;
+}
+
+.box2 {
+    box-sizing: border-box;
 }

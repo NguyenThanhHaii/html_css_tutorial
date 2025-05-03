@@ -1,0 +1,22 @@
+a {
+    /* 
+    1. padding-top, padding-bottom
+    2. margin-top, margin-bottom
+    3. width, height, min-width, min-height 
+    */
+    text-decoration: none;
+    background-color: pink;
+    border-radius: 999px;
+    color: #000;
+
+    display: inline-block;
+    width: 100px;
+    padding: 10px 20px;
+    text-align: center;
+    margin: 20px 30px 0 10px;
+}
+
+a:hover {
+    background-color: #000;
+    color: pink;
+}
