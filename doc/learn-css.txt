@@ -400,3 +400,98 @@
 
 78. CSS backdrop-filter Cách làm mờ nền đơn giản
     - backdrop-filter: blur(npx) contrast(x%)
+
+79. Clip-path CSS
+    - Tạo 1 vùng cắt, nội dung trong vùng cắt sẽ đc hiển thị, nội dung nằm ngoài sẽ bị ẩn đi
+        + circle()
+        + inset()
+        + polygon()
+
+80. Hiệu ứng đổ bóng Box-shadow
+    - https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
+    - https://box-shadow.dev
+    - https://getcssscan.com/css-box-shadow-examples
+    - box-shadow: offset-x | offset-y | color
+
+81. Quản lý sự kiện chuột pointer-events
+    - pointer-events: none;   không cho tương tác
+
+82. Làm việc với hình ảnh
+    - loading="lazy" : kéo đến mới load ảnh
+    -   /* mẹo căn giữa */
+        display: block;
+        margin: 0 auto;
+
+83. CSS Pseudo elements
+    - p::first-line : chọn dòng đầu tiên các thẻ p
+    - p::first-letter : chọn chữ cái đầu tiên các thẻ p
+    - p::selection : chọn phần tử vùng đang được bôi đen các thẻ p
+    - p::market : chọn các điểm đánh dấu của các phần tử li p
+    - p::before : thêm phần tử vào đằng trước thẻ p
+    - p::after : thêm phần tử vào đằng sau thẻ p
+
+84. CSS Counters User
+    .box {
+        /* Tạo biến đếm, reset về 0 */
+        counter-reset: section;
+    }
+
+    .box h2 {
+        /* Tăng biến đếm lên 1  */
+        counter-increment: section;
+        /* Tạo biến đếm và reset biến đếm thẻ h3 về 0 */
+        counter-reset: sub-section;
+    }
+
+    .box h2::before {
+        /* Thêm vào trước thẻ h2  */
+        content: "Phần " counter(section) ": ";
+    }
+
+    .box h3 {
+        /* Tăng biến đếm lên 1  */
+        counter-increment: sub-section;
+    }
+
+    .box h3::before {
+        /* Thêm vào trước thẻ h3  */
+        content: "Phần " counter(section) "." counter(sub-section) ": ";
+    }
+
+85. Tính toán linh hoạt với CSS calc() - CSS Calc() function
+    - calc()
+
+86. Học CSS Variables
+    :root {
+        --box-height: 100px;
+        --box-color: #0f0;
+    }
+
+    .box {
+        height: var(--box-height);
+        background-color: var(--box-color);
+        margin-bottom: 10px;
+    }
+
+87. CSS Position
+    - Thuộc tính position: cho phép điều chỉnh vị trí các phần tử trên trang web
+
+    - position: static; đây là giá trị mặc định của position, vị trí cố định trên html khi chưa can thiệp bằng css
+
+    - position: relative; - định vị so với vị trí ban đầu của nó 1 khoảng x
+        + left
+        + right
+        + top
+        + bottom
+
+    - position: absolute; - phần tử được đưa ra khỏi luồng ban đầu
+
+    - position: fixed; - fix cứng phần tử theo viewport
+
+    - z-index: dùng để xác định xem phần tử nào nằm cao hơn phần tử nào (phần tử thấp hơn có thể bị che khuất)
+
+    - position: sticky; - dùng để tạo hiệu ứng bám dính, khi nội dung trong thẻ cha gần nhất có thanh cuộn
+
+88. Giới thiệu về dàn trang, Page layout & component layout, tìm hiểu về Float layout
+    - float (left, right, both)
+    - clear

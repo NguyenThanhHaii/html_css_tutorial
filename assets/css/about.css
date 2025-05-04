@@ -110,3 +110,95 @@ body {
         -webkit-background-clip: text;
     }
 }
+
+.boxx {
+    width: 200px;
+    margin: 0 auto;
+    height: 500px;
+    height: 200px;
+    background: url(../img/avatar/image.png) center / cover;
+    /* clip-path: circle(50% at 50% 50%); */
+    /* clip-path: inset(20px);
+    clip-path: inset(20px 50px);
+    clip-path: inset(20px 50px 80px);
+    clip-path: inset(20px 30px 30px 20px round 16px 20px); */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+}
+
+.container-1 {
+    width: 150px;
+    height: 150px;
+    margin: 200px;
+    background-color: red;
+    box-shadow: 160px 0 green, 0 160px blue, 160px 160px yellow;
+}
+
+.girl {
+    max-width: 70%;
+    max-height: 600px;
+    /* mẹo căn giữa */
+    display: block;
+    margin: 0 auto;
+}
+
+.container-2 {
+    /* Tạo biến đếm, reset về 0 */
+    counter-reset: section;
+}
+
+.container-2 h2 {
+    /* Tăng biến đếm lên 1  */
+    counter-increment: section;
+    /* Tạo biến đếm và reset biến đếm thẻ h3 về 0 */
+    counter-reset: sub-section;
+}
+
+.container-2 h2::before {
+    /* Thêm vào trước thẻ h2  */
+    content: "Phần " counter(section) ": ";
+}
+
+.container-2 h3 {
+    /* Tăng biến đếm lên 1  */
+    counter-increment: sub-section;
+}
+
+.container-2 h3::before {
+    /* Thêm vào trước thẻ h3  */
+    content: "Phần " counter(section) "." counter(sub-section) ": ";
+}
+
+.nav {
+    height: 100px;
+    background-color: #ccc;
+    width: calc(100% - 100px);
+    margin: 0 auto;
+}
+
+.main_content {
+    background-color: beige;
+    height: calc(100vh - 100px);
+}
+
+:root {
+    --box-height: 100px;
+    --box-color: #0f0;
+}
+
+.box1 {
+    height: var(--box-height);
+    background-color: var(--box-color);
+    margin-bottom: 10px;
+}
+
+.box2 {
+    height: var(--box-height);
+    background-color: var(--box-color);
+    margin-bottom: 10px;
+}
+
+.box3 {
+    height: var(--box-height);
+    background-color: var(--box-color);
+    margin-bottom: 10px;
+}
