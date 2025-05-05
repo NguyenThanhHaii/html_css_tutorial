@@ -1,4 +1,4 @@
-.container {
+.contain {
     background: yellow;
     position: relative;
 }
@@ -83,4 +83,19 @@ h2 {
 .pic1 {
     width: 300px;
     float: right;
+}
+
+.container {
+    font-size: 1.5rem;
+    display: flex;
+    background-color: yellow;
+    /* flex-wrap: wrap;
+    flex-direction: row-reverse; */
+    flex-flow: wrap row-reverse;
+}
+
+.boX {
+    background-color: red;
+    width: 30%;
+    border: 10px solid green;
 }

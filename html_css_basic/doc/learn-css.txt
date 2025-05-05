@@ -495,3 +495,62 @@
 88. Giới thiệu về dàn trang, Page layout & component layout, tìm hiểu về Float layout
     - float (left, right, both)
     - clear
+
+89.1 Flex Box CSS - flex container
+    - flex box: sẽ đưa phần tử ra khỏi luồng thông thường, tuân theo quy tắc riêng
+        + trục main axis: trục nằm ngang
+        + trục cross axis: trục nằm dọc
+    - https://css-tricks.com/snippets/css/a-guide-to-flexbox
+
+    - justify-content: căn theo trục main axis
+        + flex-start: căn sang trái
+        + flex-end: căn sang phải
+        + center: căn giữa
+        + space-between: cách đều nhau, sát lề
+        + space-evenly: cách đều nhau, cách cả lề
+        + space-around: khoảng trắng xung quanh mỗi phần tử là bằng nhau
+
+    - align-items: căn theo trục cross axis
+        + flex-start: căn trên top
+        + flex-end: căn dưới bottom
+        + center: căn giữa
+        + stretch: kéo đầy khối chứa
+        + baseline: căn theo chân phần tử
+
+    - flex-wrap: cho phép xuống hàng để đạt đủ kích thước
+        + nowrap: không xuống dòng
+        + wrap: cho phép xuống hàng
+        + wrap-reverse: xuống hàng và đảo ngược
+
+    - align-content: sử dụng kèm với flex-wrap, dùng để căn nhiều hàng theo cross axis
+        + flex-start: căn trên top
+        + flex-end: căn dưới bottom
+        + center: căn giữa
+        + stretch: tự kéo giãn lấp đầy khối cha
+        + space-between: cách đều nhau, sát lề
+        + space-around: khoảng trắng xung quanh mỗi phần tử là bằng nhau
+
+    - flex-direction: row | row-reverse -> xoay hướng trục main axis, cross axis không đổi
+      flex-direction: column | column-reverse -> main axis theo chiều dọc - cột + cross axis bị đẩy sang theo chiều ngang
+
+    - flex-flow: flex-wrap flex-direction -> viết tắt
+
+    - https://game.tuhoc.cc/3/#vi
+
+89.2. Flex Box CSS - flex item
+    - align-self: căn theo trục cross axis
+        + flex-start: căn trên top
+        + flex-end: căn dưới bottom
+        + center: căn giữa
+        + stretch: kéo đầy khối chứa
+        + baseline: căn theo chân phần tử
+
+    - flex-grow: chia tỉ lệ theo trọng số
+
+    - flex-shrink: xác định khả năng co lại của item nếu cần
+
+    - flex-basis: set main size item (theo trục main axis)
+
+    - flex: flex-grow flex-shrink flex-basis
+
+    - order: thay đổi thứ tự các item
